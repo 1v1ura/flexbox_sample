@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* base
+****************************************/
+body {
+  position: relative;
+}
+
+/* layout
+****************************************/
+.l-header > div {
+  background: url(../img/bg_jumbotron.png);
+}
+.l-footer {
+  margin-top: 3em;
+  padding: 3em 0;
+  border-top: 1px solid rgba(0,0,0,.125);
+  text-align: center;
+}
+
+/* module
+****************************************/
+.m-heading01 {
+  margin-top: 3em;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.l-column-main > div > section:first-child > .m-heading01 {
+  margin-top: 0;
+}
+.m-scrollspyBlock-list {
+  width: 16em;
+}
+
+/* state
+****************************************/
+.m-scrollspyBlock-list.is-fixed {
+  position: fixed;
+  width: 16em;
+  top: 0;
+}
