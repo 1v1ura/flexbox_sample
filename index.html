@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Flexbox sample</title>
-<!-- css -->
-<link rel="stylesheet" href="src/css/reset.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<link rel="stylesheet" href="src/css/style.css">
-<link rel="stylesheet" href="src/css/demo.css">
-<!-- /css -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox sample</title>
+  <!-- css -->
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/demo.css">
+  <!-- /css -->
 </head>
 <body data-spy="m-scroll" data-target=".m-scrollspyBlock">
   <div class="container">
@@ -58,7 +58,7 @@
         <!-- コンテンツエリア -->
         <div class="l-column-main col-9">
           <div data-spy="m-scroll" data-target=".m-scrollspyBlock-list" data-offset="0">
-            
+
             <section>
               <h2 id="list-item-1" class="m-heading01">共通html</h2>
               <p>
@@ -186,7 +186,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-5" class="m-heading01">flex-flow</h2>
               <p>flex-direction プロパティと flex-wrap プロパティのショートハンドプロパティ</p>
@@ -203,7 +203,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-6" class="m-heading01">justify-content</h2>
               <p>水平方向にある「Flexアイテム」をどのように揃えるか指定するプロパティ</p>
@@ -281,7 +281,7 @@
               </div>
               <p>※「flex-start」と「flex-end」は、<a href="http://www.html5.jp/tag/attributes/dir.html" target="_blank">dir属性</a>属性による文章の書字方向の影響を受けるので注意</p>
             </section>
-            
+
             <section>
               <h2 id="list-item-7" class="m-heading01">align-items</h2>
               <p>1行の中で「Flexアイテム」を垂直方向にどのように配置するかを定義します</p>
@@ -346,7 +346,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-8" class="m-heading01">align-content</h2>
               <p>複数行時に「Flexアイテム」の垂直方向の揃え方を指定<br><code>flex-wrap: nowrap;</code>を指定して１行になる場合は、align-contentプロパティの指定は無効になります。</p>
@@ -441,7 +441,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-9" class="m-heading01">align-self</h2>
               <p>「Flexアイテム」の垂直方向の位置を指定するプロパティです。<br>align-itemsと同じ機能ですが、「Flexアイテム」側で指定を行う時に使用するプロパティでalign-itemsよりも優先されます。</p>
@@ -466,7 +466,7 @@
                 <li>baseline</li>
               </ul>
             </section>
-            
+
             <section>
               <h2 id="list-item-10" class="m-heading01">flex-basis</h2>
               <p>「Flexアイテム」の幅を指定</p>
@@ -507,7 +507,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-11" class="m-heading01">flex-grow</h2>
               <p>「Flexコンテナー」に余白があった場合に、flex-growの指定がある「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で伸ばすかを指定</p>
@@ -523,7 +523,7 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-12" class="m-heading01">flex-shrink</h2>
               <p>「Flexコンテナー」の幅が、「Flexアイテム」の幅の合計より小さい場合にflex-shrinkを指定した「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で縮小させるか指定</p>
@@ -539,28 +539,12 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
               <h2 id="list-item-13" class="m-heading01">flex</h2>
-              <p>「Flexコンテナー」の幅が、「Flexアイテム」の幅の合計より小さい場合にflex-shrinkを指定した「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で縮小させるか指定</p>
-              <div class="demo demo32">
-                <code>flex-shrink: number;</code>
-                <div class="flex-container">
-                  <div class="flex-item">Item 1</div>
-                  <div class="flex-item">Item 2</div>
-                  <div class="flex-item">Item 3</div>
-                </div>
-                <div class="m-codeBLock">
-                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-wrap:&nbsp;nowrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>width:&nbsp;500px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:first-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;2;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:last-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
-                </div>
-              </div>
-            </section>
-            
-            <section>
-              <h2 id="list-item-14" class="m-heading01">flex</h2>
               <p><code>flex-grow</code><code>flex-shrink</code><code>flex-basis</code>のショートハンドプロパティ</p>
               <div class="demo demo33">
-                <code>flex-shrink: flex-grow flex-shrink flex-basis;</code>
+                <code>flex: flex-grow flex-shrink flex-basis;</code>
                 <div class="flex-container">
                   <div class="flex-item">Item 1</div>
                   <div class="flex-item">Item 2</div>
@@ -571,9 +555,9 @@
                 </div>
               </div>
             </section>
-            
+
             <section>
-              <h2 id="list-item-15" class="m-heading01">order</h2>
+              <h2 id="list-item-14" class="m-heading01">order</h2>
               <p>flex アイテムをレイアウトに使用する順序を指定</p>
               <div class="demo demo34">
                 <code>order: number;</code>
@@ -587,7 +571,7 @@
                 </div>
               </div>
             </section>
-            
+
           </div>
         </div>
         <!-- /コンテンツエリア -->
