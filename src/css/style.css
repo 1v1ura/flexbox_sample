@@ -26,8 +26,20 @@ body {
 .l-column-main > div > section:first-child > .m-heading01 {
   margin-top: 0;
 }
+.l-column-main p {
+  margin: 1em 0;
+}
 .m-scrollspyBlock-list {
   width: 16em;
+}
+.m-codeBLock {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f7f7f7;
+}
+.m-codeBLock pre {
+  margin: 0;
+  padding: 0;
 }
 
 /* state

@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>hogehoge</title>
-  <!-- css -->
-  <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" href="src/css/demo.css">
-  <!-- /css -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Flexbox sample</title>
+<!-- css -->
+<link rel="stylesheet" href="src/css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" href="src/css/style.css">
+<link rel="stylesheet" href="src/css/demo.css">
+<!-- /css -->
 </head>
 <body data-spy="m-scroll" data-target=".m-scrollspyBlock">
   <div class="container">
 
     <header class="l-header">
       <div class="jumbotron">
-        <h1 class="display-3">hogehoge</h1>
+        <h1 class="display-3">Flexbox sample</h1>
         <hr class="my-4">
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+          Flexbox(Flexible Box Layout Module)を使用したレイアウトのサンプルページです。<br>
+          参考サイト：<a href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">CSS flexible box の利用 - MDN</a>
+        </p>
+        <p>Flexboxのブラウザ実装状況は、下記ボタンから「Can I use...」より確認してください。</p>
+        <p class="lead">
+          <a class="btn btn-info btn-lg" href="https://caniuse.com/#search=Flexible%20Box%20Layout%20Module" role="button" target="_blank">Can I use...</a>
+        </p>
       </div>
     </header>
 
@@ -30,10 +37,20 @@
         <div class="l-column-sub col-3">
           <div class="list-group m-scrollspyBlock-list m-anchorScroll">
             <a class="list-group-item list-group-item-action" href="#">Page top</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-1">共通html</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">Flexboxの基本型</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">flex-direction</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4">flex-wrap</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-5">flex-flow</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-6">justify-content</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-7">align-items</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-8">align-content</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-9">align-self</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-10">flex-basis</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-11">flex-grow</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-12">flex-shrink</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-13">flex</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-14">order</a>
           </div>
         </div>
         <!-- /追従リスト  -->
@@ -41,26 +58,536 @@
         <!-- コンテンツエリア -->
         <div class="l-column-main col-9">
           <div data-spy="m-scroll" data-target=".m-scrollspyBlock-list" data-offset="0">
+            
             <section>
-              <h2 id="list-item-1" class="m-heading01">Item 1</h2>
-              
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, corporis animi est culpa, totam voluptates voluptatum vel quo iste deserunt vitae, molestiae, quidem amet! Eius animi facilis enim alias. Ea dolorum possimus velit cumque doloremque optio tempora illum quidem blanditiis quas incidunt autem voluptates, cupiditate laudantium modi magnam non nihil officiis. Dicta nobis, minus ipsum consequuntur veniam, nulla hic, accusantium neque cumque nihil, deleniti vero minima laboriosam. Illum aut ipsum reiciendis quae consequuntur sunt est harum? Veniam voluptates dolores modi blanditiis odio quasi recusandae dignissimos eius delectus, adipisci deleniti, in numquam itaque amet? Maxime at nobis quidem, in alias, eum dolorum hic quas assumenda numquam blanditiis, praesentium aut. Voluptatum, obcaecati, odio totam excepturi eaque necessitatibus cupiditate quia a consequuntur, quasi distinctio eligendi nemo eveniet cum eos quis minima adipisci praesentium. Labore iusto officia quis beatae, quo rerum ducimus delectus, dicta, nihil, id repudiandae excepturi! Nihil dignissimos, illum quos excepturi commodi nulla voluptatum eveniet consequuntur sint esse nam est, ipsum quam eum ullam sed aspernatur optio consequatur rem, amet, ab vitae. Quasi nesciunt, laborum assumenda mollitia explicabo, iste, tenetur dicta, aspernatur nam quae expedita quisquam reiciendis rem vel architecto. Tempore odio molestias eius voluptatem. Omnis nobis ex et at molestiae earum quos, a libero sapiente dolorum corporis esse, quae atque fugit aut laboriosam dolores aperiam tenetur maxime quidem illum laborum repudiandae reprehenderit animi cum. Placeat dolores illum obcaecati asperiores, aliquam explicabo nesciunt aperiam ea suscipit iure? Facilis cumque quam eos odit voluptates optio esse cupiditate distinctio enim incidunt ex, ut laborum, accusamus atque porro hic aperiam? Eius quis similique consectetur excepturi voluptatibus incidunt repellat soluta dolorem alias pariatur adipisci, vel expedita ad delectus natus veniam dicta optio vero voluptatem assumenda temporibus id, accusantium! Tenetur obcaecati nihil, cupiditate inventore! Similique aperiam assumenda optio commodi nulla numquam, molestiae a odio repellendus, quibusdam aspernatur, ipsum recusandae possimus cum. Libero eius earum, iure mollitia, deserunt facilis nisi labore, corrupti quam aliquam perferendis. In magnam autem perferendis, cumque a culpa quod enim repellendus ut odio, voluptate modi voluptas quibusdam beatae et mollitia nemo ex incidunt illum dolorum sit, deserunt nobis totam nam possimus? Iusto mollitia, harum velit, recusandae fugiat deserunt tempora accusamus cumque quae corrupti voluptate error porro dolorem veritatis vero qui. Architecto quis, culpa. Deleniti sequi, culpa earum atque autem non eligendi dolore voluptate. Facere laboriosam repellat illum voluptas quasi nisi consequatur quis sequi voluptatum, odit, quaerat unde dolor atque blanditiis eaque soluta ex necessitatibus reprehenderit a labore qui totam? Perspiciatis recusandae molestias soluta doloribus voluptate ex, unde dicta esse accusantium, minima obcaecati. Laborum officia itaque fuga, accusamus, nemo eum possimus ipsum, atque dicta aperiam quae harum, earum reiciendis quod voluptate. Tempore provident quae laborum optio, assumenda tenetur sapiente dolorem nisi voluptates ab repudiandae ratione ex officiis, ut corporis doloremque laudantium minima laboriosam facilis deleniti quasi necessitatibus magni excepturi. Dolore voluptatibus eum nostrum blanditiis, ratione quo ipsam, est in consequatur soluta eius neque enim quasi illo quae voluptate quos. Distinctio animi quibusdam veritatis quis nemo! Quas quam, itaque tempora numquam consequuntur? Iure minima numquam quas!</p>
+              <h2 id="list-item-1" class="m-heading01">共通html</h2>
+              <p>
+                当ページのデモで使用するHTMLは下記の構造で統一します。<br>
+                各プロパティの挙動確認の為、<code>&lt;div class=&quot;flex-item&quot;&gt;Item X&lt;/div&gt;</code>の数が増減する事があります。
+              </p>
+              <div class="m-codeBLock">
+                <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;div&nbsp;class=&quot;flex-container&quot;&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;div&nbsp;class=&quot;flex-item&quot;&gt;Item&nbsp;1&lt;/div&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;flex-item&quot;&gt;Item&nbsp;2&lt;/div&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;flex-item&quot;&gt;Item&nbsp;3&lt;/div&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;flex-item&quot;&gt;Item&nbsp;4&lt;/div&gt;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&lt;/div&gt;</span></span></span></div></pre>
+              </div>
+              <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item">Item 4</div>
+              </div>
             </section>
 
             <section>
-              <h2 id="list-item-2" class="m-heading01">Item 2</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae soluta hic dolor ea neque quam accusamus, consequuntur odit dolores ratione deleniti a doloribus impedit ab totam. Odit nesciunt aspernatur aliquam nihil eligendi aut a eum tempora. Tempora, incidunt, molestias cupiditate officiis quae maxime. Saepe, sint facere distinctio sunt assumenda reprehenderit neque quis aut incidunt iste corporis quas blanditiis, hic tenetur vero praesentium libero suscipit! A numquam illo magnam est velit quo sint, molestias neque debitis eum assumenda quisquam amet soluta, quaerat nobis id fugit rem, quibusdam cum nam. Odio eos quam dignissimos at praesentium, unde alias. Facilis saepe amet odio officiis ex. Vel cupiditate est minus similique consectetur, corporis obcaecati beatae ea ipsa pariatur ducimus, molestiae. Saepe, ea illum atque sit asperiores temporibus eaque deleniti nostrum impedit distinctio libero omnis non laboriosam maxime? Veniam quas incidunt expedita illum autem dolorem, possimus magni vero assumenda, nemo facere consequuntur reprehenderit dolorum maiores excepturi iste, laborum ratione. Aliquam rem voluptatem debitis natus perferendis velit possimus voluptatibus illo neque vitae iusto distinctio iste rerum, consequuntur temporibus tenetur voluptatum autem numquam, animi nesciunt mollitia. Qui facere enim porro quae tempora consequatur saepe veniam repudiandae cum dolorum iusto corporis ipsam quod ipsa odio, odit sint optio possimus ea, sunt laborum quam. Nam labore facilis repudiandae cumque, eos optio molestias pariatur dolore aut tempora quis fugit fugiat ab rerum, ullam ducimus unde assumenda iure itaque doloribus harum magni voluptates consectetur. Quod dignissimos incidunt similique suscipit voluptatum nam error explicabo quasi aliquid hic deleniti, quae iusto qui nulla nemo vero cupiditate ea, totam doloremque architecto tempora reiciendis repellendus sunt eligendi sapiente! Quas, recusandae voluptas similique nobis consectetur tenetur nesciunt! Dolorem inventore accusamus, consectetur ducimus aliquid rem enim quo minima officia esse illo officiis nemo rerum. Aliquid, culpa, quidem. Praesentium cupiditate ad, numquam culpa maxime, illum corrupti vitae necessitatibus.</p>
+              <h2 id="list-item-2" class="m-heading01">Flexboxの基本型</h2>
+              <p>
+                Flexboxレイアウトの構造は、「Flexコンテナー」と呼ばれる親要素にの中に、「Flexアイテム」と呼ばれる子要素を入れるだけです。
+                親要素に<code>display:flex;</code>を指定するとその要素は「Flexコンテナー」となり、自動的にその子供要素は「Flexアイテム」となります。
+              </p>
+              <p>親要素に<code>display:flex;</code>を指定するだけで横並びレイアウトを簡単に作れます。</p>
+              <p>「Flexアイテム」が横並びになるのは、子要素の配置方法を指定するflex-directionプロパティの初期値にrowが設定されている為、下記のような挙動になります。</p>
+              <div class="demo demo1">
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <p>もし親要素がインライン要素の場合は<code>display: inline-flex;</code>を指定します。</p>
             </section>
 
             <section>
-              <h2 id="list-item-3" class="m-heading01">Item 3</h2>
-              <p>.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h2 id="list-item-3" class="m-heading01">flex-direction</h2>
+              <p>「Flexアイテム」をどの方向に配置するか指定するプロパティです。</p>
+              <div class="demo demo2">
+                <code>flex-direction: row;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;ライン上に「Flexアイテム」が並ぶ方向&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-direction:&nbsp;row;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo3">
+                <code>flex-direction: row-reverse;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;&lt;row&gt;&nbsp;と同様ですが、逆向き&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-direction:&nbsp;row-reverse;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+                <div class="demo demo4">
+                  <code>flex-direction: column;</code>
+                  <div class="flex-container">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                  </div>
+                  <div class="m-codeBLock">
+                    <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」を積み重ねる方向&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-direction:&nbsp;column;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                  </div>
+                </div>
+                <div class="demo demo5">
+                  <code>flex-direction: column-reverse;</code>
+                  <div class="flex-container">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                  </div>
+                  <div class="m-codeBLock">
+                    <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;&lt;column&gt;&nbsp;と同様ですが、逆向き&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-direction:&nbsp;column-reverse;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                  </div>
+                </div>
+              </div>
+              <p>※ <a href="http://www.html5.jp/tag/attributes/dir.html" target="_blank">dir属性</a>による文章の書字方向の影響を受けるので注意</p>
             </section>
 
             <section>
-              <h2 id="list-item-4" class="m-heading01">Item 4</h2>
-              <p>.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h2 id="list-item-4" class="m-heading01">flex-wrap</h2>
+              <p>「Flexアイテム」の折り返しを指定するプロパティです。</p>
+              <div class="demo demo6">
+                <code>flex-wrap: wrap;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」の折り返しを許可&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-wrap:&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo7">
+                <code>flex-wrap: nowrap;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」の折り返しを許可しない&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-wrap:&nbsp;nowrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
             </section>
+            
+            <section>
+              <h2 id="list-item-5" class="m-heading01">flex-flow</h2>
+              <p>flex-direction プロパティと flex-wrap プロパティのショートハンドプロパティ</p>
+              <div class="demo demo8">
+                <code>flex-flow: row wrap;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*flex-direction&nbsp;プロパティと&nbsp;flex-wrap&nbsp;プロパティのショートハンドプロパティ*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-6" class="m-heading01">justify-content</h2>
+              <p>水平方向にある「Flexアイテム」をどのように揃えるか指定するプロパティ</p>
+              <div class="demo demo9">
+                <code>justify-content: space-between;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」を均等に分散する。最初のアイテムは始端に接する。最後のアイテムは終端に接する。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;space-between;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo10">
+                <code>justify-content: space-around;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」均等に分散する。アイテムは、両側に半分のサイズのスペースを持つ。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;space-around;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo11">
+                <code>justify-content: space-evenly;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexアイテム」を均等に分散する。各アイテムの周囲に均等なスペースを置く&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;space-evenly;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo12">
+                <code>justify-content: flex-start;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;行頭から配置。左揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;flex-start;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo13">
+                <code>justify-content: center;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;中央揃え&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;center;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo14">
+                <code>justify-content: flex-end;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;行末から配置。右揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;flex-end;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <p>※「flex-start」と「flex-end」は、<a href="http://www.html5.jp/tag/attributes/dir.html" target="_blank">dir属性</a>属性による文章の書字方向の影響を受けるので注意</p>
+            </section>
+            
+            <section>
+              <h2 id="list-item-7" class="m-heading01">align-items</h2>
+              <p>1行の中で「Flexアイテム」を垂直方向にどのように配置するかを定義します</p>
+              <div class="demo demo15">
+                <code>align-items: stretch;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の高さ、またはコンテンツの一番多い「Flexアイテム」の高さに合わせて広げて配置&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-items:&nbsp;stretch;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>height:&nbsp;auto;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo16">
+                <code>align-items: flex-start;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;20em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の開始位置から配置。上揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-items:&nbsp;flex-start;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo17">
+                <code>align-items: center;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;20em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;中央揃え&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-items:&nbsp;center;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo18">
+                <code>align-items: flex-end;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;20em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の終点から配置。下揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-items:&nbsp;flex-end;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo19">
+                <code>align-items: baseline;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;ベースラインで揃える&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-items:&nbsp;baseline;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-8" class="m-heading01">align-content</h2>
+              <p>複数行時に「Flexアイテム」の垂直方向の揃え方を指定<br><code>flex-wrap: nowrap;</code>を指定して１行になる場合は、align-contentプロパティの指定は無効になります。</p>
+              <div class="demo demo20">
+                <code>align-content: stretch;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の高さに合わせて広げて配置&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;stretch;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo21">
+                <code>align-content: flex-start;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の開始位置から配置。上揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;flex-start;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo22">
+                <code>align-content: center;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;センター寄せ&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;center;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo23">
+                <code>align-content: flex-end;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;「Flexコンテナー」の終了位置から配置。下揃え。&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;flex-end;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo24">
+                <code>align-content: space-between;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;最初と最後の「Flexアイテム」を上下の端に配置し、残りの要素は均等に間隔をあけて配置&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;space-between;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo25">
+                <code>align-content: space-around;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                  <div class="flex-item">Item 5</div>
+                  <div class="flex-item">Item 6</div>
+                  <div class="flex-item">Item 7</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;上下端にある「Flexアイテム」も含め、均等に間隔をあけて配置&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;space-around;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-9" class="m-heading01">align-self</h2>
+              <p>「Flexアイテム」の垂直方向の位置を指定するプロパティです。<br>align-itemsと同じ機能ですが、「Flexアイテム」側で指定を行う時に使用するプロパティでalign-itemsよりも優先されます。</p>
+              <div class="demo demo26">
+                <code>align-content: space-around;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2 <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, totam illum optio sapiente quam sequi, enim aliquid cum aperiam possimus.</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;height:&nbsp;30em;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;/*&nbsp;上下端にある「Flexアイテム」も含め、均等に間隔をあけて配置&nbsp;*/</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;align-content:&nbsp;space-around;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <p>その他に下記プロパティの指定が可能ですが、align-itemsと同じ挙動の為デモは、省略します。</p>
+              <ul class="demo27">
+                <li>stretch</li>
+                <li>flex-start</li>
+                <li>flex-end</li>
+                <li>center</li>
+                <li>baseline</li>
+              </ul>
+            </section>
+            
+            <section>
+              <h2 id="list-item-10" class="m-heading01">flex-basis</h2>
+              <p>「Flexアイテム」の幅を指定</p>
+              <div class="demo demo28">
+                <code>flex-basis: auto;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-basis:&nbsp;auto;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo29">
+                <code>flex-basis: px指定;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-basis:&nbsp;350px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+              <div class="demo demo30">
+                <code>flex-basis: %指定;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                  <div class="flex-item">Item 4</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row&nbsp;wrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-basis:&nbsp;50%;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-11" class="m-heading01">flex-grow</h2>
+              <p>「Flexコンテナー」に余白があった場合に、flex-growの指定がある「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で伸ばすかを指定</p>
+              <div class="demo demo31">
+                <code>flex-grow: number;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:first-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-grow:&nbsp;1;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:last-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-grow:&nbsp;2;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-12" class="m-heading01">flex-shrink</h2>
+              <p>「Flexコンテナー」の幅が、「Flexアイテム」の幅の合計より小さい場合にflex-shrinkを指定した「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で縮小させるか指定</p>
+              <div class="demo demo32">
+                <code>flex-shrink: number;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-wrap:&nbsp;nowrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>width:&nbsp;500px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:first-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;2;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:last-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-13" class="m-heading01">flex</h2>
+              <p>「Flexコンテナー」の幅が、「Flexアイテム」の幅の合計より小さい場合にflex-shrinkを指定した「Flexアイテム」を他の「Flexアイテム」と比較してどのくらいの比率で縮小させるか指定</p>
+              <div class="demo demo32">
+                <code>flex-shrink: number;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-wrap:&nbsp;nowrap;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>width:&nbsp;500px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:first-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;2;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:last-child&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>flex-shrink:&nbsp;3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-14" class="m-heading01">flex</h2>
+              <p><code>flex-grow</code><code>flex-shrink</code><code>flex-basis</code>のショートハンドプロパティ</p>
+              <div class="demo demo33">
+                <code>flex-shrink: flex-grow flex-shrink flex-basis;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;space-between;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>width:&nbsp;230px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex:&nbsp;1&nbsp;1&nbsp;33.3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
+            <section>
+              <h2 id="list-item-15" class="m-heading01">order</h2>
+              <p>flex アイテムをレイアウトに使用する順序を指定</p>
+              <div class="demo demo34">
+                <code>order: number;</code>
+                <div class="flex-container">
+                  <div class="flex-item">Item 1</div>
+                  <div class="flex-item">Item 2</div>
+                  <div class="flex-item">Item 3</div>
+                </div>
+                <div class="m-codeBLock">
+                  <pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>display:&nbsp;flex;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex-flow:&nbsp;row;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;justify-content:&nbsp;space-between;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item&nbsp;{</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>width:&nbsp;230px;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>&nbsp;&nbsp;flex:&nbsp;1&nbsp;1&nbsp;33.3;</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:first-child&nbsp;{&nbsp;order:&nbsp;3;}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:nth-child(2)&nbsp;{&nbsp;order:&nbsp;1;}</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>.flex-container&nbsp;.flex-item:last-child&nbsp;{&nbsp;order:&nbsp;2;}</span></span></span></div></pre>
+                </div>
+              </div>
+            </section>
+            
           </div>
         </div>
         <!-- /コンテンツエリア -->
@@ -71,7 +598,7 @@
     <!-- /.m-scrollspyBlock -->
 
     <footer class="l-footer">
-      <p><small>hogehogehoge</small></p>
+      <p><small>Flexbox sample</small></p>
     </footer>
   </div>
   <!-- /.container -->
