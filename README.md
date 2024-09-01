@@ -2,4 +2,4 @@
 Flexible Box Layout Module sample
 
 ## GitHub Pages
-https://tkm-mur.github.io/flexbox_sample/
+https://1v1ura.github.io/flexbox_sample/
